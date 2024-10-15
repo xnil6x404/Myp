@@ -141,17 +141,18 @@ img {
   position: relative;
   color: #fff;
 }
-.nav__link:hover {
-  position: relative;
-}
-.nav__link:hover::after {
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background:blue ;
   position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
   left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width: 100%;
 }
 .nav__logo {
   color: var(--second-color);
@@ -177,6 +178,11 @@ img {
 .show {
   right: 0;
 }
+
+.l-main{
+  background-color:lavender;
+}
+
 
 /*===== HOME =====*/
 .home {
