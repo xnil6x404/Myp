@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // Route to serve the HTML page directly
-app.get('/', (req, res) => {
+app.get('/xnil', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
