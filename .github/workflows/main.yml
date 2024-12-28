@@ -1,0 +1,32 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checkout the repository
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Specify the version of Node.js you want to use
+
+      - name: Install dependencies
+        run: npm install  # Install dependencies from package.json
+
+      - name: Run tests
+        run: npm test  # Run tests (make sure you have a test script in package.json)
+
+      # Optionally, you can add steps to deploy your application or run other tasks
+      # - name: Deploy
+      #   run: npm run deploy
