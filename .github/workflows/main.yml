@@ -25,7 +25,7 @@ jobs:
         run: npm install  # Install dependencies from package.json
 
       - name: Run tests
-        run: npm test  # Run tests (make sure you have a test script in package.json)
+        run: node index.js  # Run tests (make sure you have a test script in package.json)
 
       # Optionally, you can add steps to deploy your application or run other tasks
       # - name: Deploy
